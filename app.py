@@ -34,6 +34,9 @@ members = [
 # ID counters
 book_id_counter = 3
 member_id_counter = 3
+@app.route('/', methods=['GET'])
+def index():
+    return jsonify({'message': 'Welcome to the Library Management System API. Please use /books or /members endpoints.'})
 
 @app.route('/books', methods=['GET'])
 def get_books():
